@@ -1,0 +1,210 @@
+$bg_color: white;
+$component_bg_color: rgba(245, 245, 245, 1);
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.center_column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+html, body{
+	@extend .center;
+	
+	width: 100%;
+	height: 100%;
+	
+	margin: 0px;
+	
+	overflow: hidden;
+	
+	background-color: $bg_color;
+	
+	font-family: 'Open Sans', Verdana;
+}
+
+#main_left{
+	@extend .center;
+
+	position: relative;
+	
+	min-width: 950px;
+	
+	margin: 2.5% 2.5% 2.5% 1.25%;
+	
+	background-color: $component_bg_color;
+}
+
+#main_right{
+
+	display: none;
+	
+	height: 95%;
+	min-width: 200px;
+	
+	position: relative;
+	background-color: $component_bg_color;
+	
+	margin: 2.5% 1.25% 2.5% 2.5%;
+	
+	
+	text-align: justify;
+}
+
+#right_text{
+	margin: 50px 20px;
+}
+
+
+@media screen and (min-width: 1250px) {
+	body{
+		
+	}
+
+	#main_left{
+
+	}
+	
+	#main_right{
+		display: initial;
+	}
+}
+
+
+
+
+
+
+
+
+
+#main_left-radial{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#main_left-panel{
+	position: absolute;
+	width: 65%;
+
+	min-width: 450px;
+	
+	top: 20%;
+	
+	pointer-events: none;
+}
+
+#main_left-info{
+	@extend .center_column;
+
+	margin-bottom: 30px;
+	
+	width: 100%;
+}
+
+#main_left-bottom{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+#main_left-diagram, #main_left-pics, #main_left-graphs{
+	position: absolute;
+
+	width: 33.33%;
+	
+	top: 0px;
+}
+
+
+#main_left-diagram{
+	left: 0px;
+}
+
+
+#main_left-pics{
+	@extend .center_column;
+	
+	left: 66.66%;
+	height: 310px;
+	
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+#main_left-graphs{
+	@extend .center_column;
+	
+	left: 33.33%;
+	height: 310px;
+}
+
+
+
+
+
+
+
+
+
+
+.info_child{
+	@extend .center;
+	padding: 5px;
+
+}
+
+.info_subchild{
+	@extend .center;
+	
+	width: 50%;
+}
+
+#main_left-info_1, #main_left-info_2{
+	width: 50%;
+}
+
+#main_left-info_3, #main_left-info_4{
+	@extend .center;
+
+	width: 100%;
+}
+
+
+
+.main_graph{
+	width: 100%;
+	height: 150px;
+	
+	margin-bottom: 5px;
+}
+
+
+
+.main_pic{
+	width: 90%;
+	height: calc(150px * 0.9);
+	
+	background-position: center; 
+	background-size: cover;
+}
