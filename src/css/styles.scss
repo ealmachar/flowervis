@@ -34,7 +34,7 @@ html, body{
 
 	position: relative;
 	
-	min-width: 950px;
+	min-width: 600px;
 	
 	margin: 2.5% 2.5% 2.5% 1.25%;
 	
@@ -46,13 +46,14 @@ html, body{
 	display: none;
 	
 	height: 95%;
-	min-width: 200px;
+	width: 300px;
 	
 	position: relative;
 	background-color: $component_bg_color;
 	
 	margin: 2.5% 1.25% 2.5% 2.5%;
 	
+	overflow: auto;
 	
 	text-align: justify;
 }
@@ -108,7 +109,7 @@ html, body{
 	position: absolute;
 	width: 65%;
 
-	min-width: 450px;
+	min-width: 200px;
 	
 	top: 20%;
 	
@@ -118,7 +119,7 @@ html, body{
 #main_left-info{
 	@extend .center_column;
 
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	
 	width: 100%;
 }
@@ -181,7 +182,7 @@ html, body{
 }
 
 #main_left-info_1, #main_left-info_2{
-	width: 50%;
+	width: 70%;
 }
 
 #main_left-info_3, #main_left-info_4{

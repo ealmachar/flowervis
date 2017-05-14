@@ -53,7 +53,9 @@ function radialvis(app, input){
 
 	var svg = parent.append('svg')
 		.style('position', 'absolute')
-		.on('mousemove', mousemove);
+		.on('mousemove', mousemove)
+		.on('mouseenter', mouseenter)
+		.on('mouseleave', mouseleave);
 
 	
 	var width, height;
@@ -234,7 +236,8 @@ function radialvis(app, input){
 			.style('fill', fill)
 			.style('stroke', 'black')
 			.style('stroke-width', 1);
-
+			
+		this.button = button;
 
 		this.setButtonPos = function(angle){
 			
@@ -310,6 +313,14 @@ function radialvis(app, input){
 		if(bar != app.currentBar){
 			infoUpdater.update(bar);
 		}
+	}
+	
+	function mouseleave(){
+		button.button.style('opacity', 0);
+	}
+	
+	function mouseenter(){
+		button.button.style('opacity', 1);
 	}
 	
 	function infoUpdater(){
@@ -419,7 +430,7 @@ function petalvis(app, input, type){
 	function setDimensions(){
 		outerwidth = parseInt(parent.style('width'));
 		outerheight = 150;//parseInt(parent.style('height'));
-		
+
 		var iMargin = 5;
 		margin = {top: iMargin, right: iMargin, bottom: iMargin, left: iMargin};
 		
@@ -877,7 +888,6 @@ function petalvis(app, input, type){
 	
 	this.resize = function(){
 		setDimensions();
-		
 		petals.resize();
 	};
 
@@ -1103,7 +1113,7 @@ function resizeMain(){
 	var width = parseInt($('body').css('width'));
 	var height = parseInt($('body').css('height'));
 	
-	var mindim = Math.max(Math.min(width, height) * .95, 850);
+	var mindim = Math.max(Math.min(width, height) * .95, 600);
 	
 	$('#main_left').css({
 		width: mindim,
