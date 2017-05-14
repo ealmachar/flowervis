@@ -106,6 +106,8 @@ function radialvis(app, input){
 		centery = (heightoffset + height)/2;
 
 		radius = length/2;
+		console.log(outerwidth);
+		$('#main_left-bottom').css('height', outerwidth/3);
 	}
 	
 	function renderRadial(){
@@ -429,7 +431,7 @@ function petalvis(app, input, type){
 	
 	function setDimensions(){
 		outerwidth = parseInt(parent.style('width'));
-		outerheight = 150;//parseInt(parent.style('height'));
+		outerheight = parseInt(parent.style('height'))/2;
 
 		var iMargin = 5;
 		margin = {top: iMargin, right: iMargin, bottom: iMargin, left: iMargin};
@@ -951,7 +953,7 @@ function scatterPlot(app, input, type){
 		
 	var xLabel = xAxis.append("text")
 		.attr("fill", "#000")
-		.attr("dy", ".71em")
+		.attr("dy", "-1em")
 		.style("text-anchor", "end")
 		.text(function(){ return petal ? 'Petal length' : 'Sepal length' });
 	

@@ -66,16 +66,17 @@ html, body {
   top: 0px; }
 
 #main_left-diagram {
-  left: 0px; }
+  left: 0px;
+  height: 100%; }
 
 #main_left-pics {
   left: 66.66%;
-  height: 310px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2); }
 
 #main_left-graphs {
   left: 33.33%;
-  height: 310px; }
+  height: 100%; }
 
 .info_child {
   padding: 5px; }
@@ -91,12 +92,12 @@ html, body {
 
 .main_graph {
   width: 100%;
-  height: 150px;
+  height: 45%;
   margin-bottom: 5px; }
 
 .main_pic {
   width: 90%;
-  height: calc(150px * 0.9);
+  height: 45%;
   background-position: center;
   background-size: cover; }
 
